@@ -1,0 +1,23 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "This project is a basic To-Do List application built using HTML, CSS, and JavaScript. The application allows users to add tasks and remove them. The interface is designed to be simple and user-friendly, with basic styling for a visually appealing experience.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "prettier --write 'src/**/*.{js,css,html}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayangiaretha/Todo-List.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayangiaretha/Todo-List/issues"
+  },
+  "homepage": "https://github.com/mayangiaretha/Todo-List#readme",
+  "dependencies": {
+    "prettier": "^3.1.1"
+  }
+}
