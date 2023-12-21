@@ -17,7 +17,7 @@ h1 {
     text-align: center;
     padding: 40px 0;
 }
-.tasks input {
+#taskForm input {
     border-radius: 30px;
     padding: 10px;
     color: black;
@@ -25,7 +25,7 @@ h1 {
     border: none;
     flex: 1;
 }
-.tasks{
+#taskForm{
     display: flex;
     align-items: center;
     justify-content: center;

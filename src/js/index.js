@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addTaskButton = document.getElementById('addTaskButton');
     const taskForm = document.getElementById('taskForm');
 
-    // Load tasks from local storage on page load
+
     loadTasksFromLocalStorage();
 
     addTaskButton.addEventListener('click', function () {
@@ -26,7 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             li.appendChild(checkbox);
 
-            li.innerHTML += inputBox.value;
+
+            let span = document.createElement('span');
+            span.textContent = inputBox.value;
+
+            li.appendChild(span);
 
             let editIcon = createIcon('fa fa-edit', 'Edit Task', function () {
                 editTask(li);
@@ -40,18 +44,19 @@ document.addEventListener('DOMContentLoaded', function () {
             li.appendChild(deleteIcon);
             taskList.appendChild(li);
 
-            updateLocalStorage(); // Update local storage after adding a task
+            updateLocalStorage();
         }
         inputBox.value = '';
     }
 
+
     function deleteTask(taskItem) {
         taskItem.remove();
-        updateLocalStorage(); // Update local storage after deleting a task
+        updateLocalStorage();
     }
 
     function editTask(taskItem) {
-        // Replace the task text with an editable input field and a save button
+
         let inputField = document.createElement('input');
         inputField.type = 'text';
         inputField.value = taskItem.textContent.trim();
@@ -130,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateLocalStorage() {
-        // Get current task texts and completion status from the list
+
         let tasks = Array.from(taskList.children).map(task => {
             return {
                 text: task.querySelector('span').textContent.trim(),
@@ -138,10 +143,9 @@ document.addEventListener('DOMContentLoaded', function () {
             };
         });
 
-        // Save tasks to local storage
-        localStorage.setItem('tasks', JSON.stringify(tasks));
 
-        console.log('Updated local storage:', tasks);
+
+        localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 
     function loadTasksFromLocalStorage() {
