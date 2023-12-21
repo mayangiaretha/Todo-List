@@ -1,86 +1,86 @@
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .task-container {
-    width: 500px;
-    height: 600px;
-    padding: 0 4rem;
-    background: linear-gradient(#141e30, #243b55);
-    border-radius: 16px;
+  width: 500px;
+  height: 600px;
+  padding: 0 4rem;
+  background: linear-gradient(#141e30, #243b55);
+  border-radius: 16px;
 }
 h1 {
-    color: white;
-    text-align: center;
-    padding: 40px 0;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
 }
 #taskForm input {
-    border-radius: 30px;
-    padding: 10px;
-    color: black;
-    outline: none;
-    border: none;
-    flex: 1;
+  border-radius: 30px;
+  padding: 10px;
+  color: black;
+  outline: none;
+  border: none;
+  flex: 1;
 }
-#taskForm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+#taskForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 button {
-    border: none;
-    border-radius: 40px;
-    padding: 10px 20px;
-    background-color: red;
-    color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
 }
 
 li {
-    list-style: none;
-    padding: 12px 20px; /* Adjust padding as needed */
-    color: black;
-    margin-top: 25px;
-    cursor: pointer;
-    font-size: 16px;
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  list-style: none;
+  padding: 12px 20px; /* Adjust padding as needed */
+  color: black;
+  margin-top: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .task-text {
-    flex-grow: 1;
-    flex-shrink: 0; /* Prevent shrinking */
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Show ellipsis for overflow */
+  flex-grow: 1;
+  flex-shrink: 0; /* Prevent shrinking */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
 }
 
-i.fa-trash, i.fa-edit {
-    cursor: pointer;
-    margin-left: 8px; /* Adjust the margin as needed */
+i.fa-trash,
+i.fa-edit {
+  cursor: pointer;
+  margin-left: 8px; /* Adjust the margin as needed */
 }
 
 i.fa-edit {
-    margin-left: auto;
-    margin-right: 8px; /* Space between edit and delete buttons */
+  margin-left: auto;
+  margin-right: 8px; /* Space between edit and delete buttons */
 }
 li input[type="checkbox"] {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 /* Style for the checked state of the checkbox */
 li input[type="checkbox"]:checked + span {
-    text-decoration: line-through;
-    color: #888; /* Change color as needed */
+  text-decoration: line-through;
+  color: #888; /* Change color as needed */
 }
 
 /* Optional: Style for the unchecked state of the checkbox */
 li input[type="checkbox"] + span {
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
